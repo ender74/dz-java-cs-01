@@ -18,19 +18,19 @@ public class SymbolCreatorFirstAlphTest {
 
     @Test
     public void testGozerium() {
-        final String result = symbolCreator.getSymbol("Gozerium");
+        final String result = symbolCreator.createSymbol("Gozerium");
         assertEquals("Ei", result);
     }
 
     @Test
     public void testSlimyrine() {
-        final String result = symbolCreator.getSymbol("Slimyrine");
+        final String result = symbolCreator.createSymbol("Slimyrine");
         assertEquals("Ie", result);
     }
 
     @Test
     public void testAardvark() {
-        final String result = symbolCreator.getSymbol("Aardvark");
+        final String result = symbolCreator.createSymbol("Aardvark");
         assertEquals("Aa", result);
     }
 }

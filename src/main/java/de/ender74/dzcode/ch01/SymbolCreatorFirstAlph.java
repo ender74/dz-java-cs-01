@@ -4,7 +4,7 @@ package de.ender74.dzcode.ch01;
  * Created by HHüter on 08.08.2016.
  */
 public class SymbolCreatorFirstAlph {
-    public String getSymbol(String elementName) {
+    public String createSymbol(String elementName) {
         if (elementName == null)
             return "";
         elementName = elementName.trim().toLowerCase();
@@ -27,7 +27,7 @@ public class SymbolCreatorFirstAlph {
         return sb.toString();
     }
 
-    private int indexOfLowestChar(String string, int startIdx, int endIdx) {
+    private static int indexOfLowestChar(String string, int startIdx, int endIdx) {
         assert startIdx < endIdx;
 
         int lowestIdx = -1;
