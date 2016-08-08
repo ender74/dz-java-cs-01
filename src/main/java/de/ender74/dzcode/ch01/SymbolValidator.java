@@ -4,7 +4,7 @@ package de.ender74.dzcode.ch01;
  * Created by HHüter on 08.08.2016.
  */
 public class SymbolValidator {
-    private static final int SYMBOL_LENGTH = 2;
+    public static final int SYMBOL_LENGTH = 2;
 
     public boolean validate(String elementName, String symbol) {
         if (elementName == null || symbol == null)
