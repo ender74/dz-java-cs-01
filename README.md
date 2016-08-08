@@ -20,7 +20,9 @@ For each character, the first possible matching index in the elementName is used
 index for the previous char +1. If no match can be found for one char, the symbol is invalid and false returned. If
 all chars can be matched, the symbol is valid.
 
-## Bonus Challenge 1: Find Symbol that is first in alphabetical order
+The implementation works for arbitrary symbollength, not just two as in the challenge.
+
+## Bonus Challenge 1: Find symbol that is first in alphabetical order
 This Challenge is implemented in the class [de.ender74.dzcode.ch01.SymbolCreatorFirstAlph](src/main/java/de/ender74/dzcode/ch01/SymbolCreatorFirstAlph.java)
 and tested in the class
 [de.ender74.dzcode.ch01.test.SymbolCreatorFirstAlphTest](src/test/java/de/ender74/dzcode/ch01/test/SymbolCreatorFirstAlphTest.java).
@@ -33,3 +35,17 @@ This helper function is used by the main method createSymbol. The implementation
 called to find the alphabetically lowest char in the remaining elementName string. each index must be strictly greater
 than the found index for the previous iteration. Further the index must be less than the length of the elementName minus
 the number of left iterations.
+
+The implementation works for arbitrary symbollength, not just two as in the challenge.
+
+## Bonus Challenge 2: Find maximum number of distinct symbols for given elementName
+This Challenge is implemented in the class [de.ender74.dzcode.ch01.DistinctSymbolCounter](src/main/java/de/ender74/dzcode/ch01/DistinctSymbolCounter.java)
+and tested in the class
+[de.ender74.dzcode.ch01.test.DistinctSymbolCounterTest](src/test/java/de/ender74/dzcode/ch01/test/DistinctSymbolCounterTest.java).
+
+The implementation is done with brute force. There are two nested iterations over the given elementName. Each possible symbol
+is constructed and added to an HashSet. The HashSet takes care, that there is a distinct collections for all possible symbols
+when the algorithm is finished. The size of this set is the required result.
+
+For clarity this implementation works only for symbols of length 2. To make it work with arbitrary symbollength, the
+implementation would probably be way more complex and less understandable.
